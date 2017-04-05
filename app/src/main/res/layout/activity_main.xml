@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+<TableLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context="com.example.administrator.myapp.MainActivity">
+
+    <TableRow android:layout_width="fill_parent"
+        android:layout_height="match_parent"
+        android:layout_marginBottom="30sp">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="姓名：" />
+        <EditText
+            android:id="@+id/user"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"/>
+    </TableRow>
+
+    <TableRow android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="30sp">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="性别："/>
+        <TableRow>
+                <RadioGroup
+                    android:id="@+id/Sex"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                        <RadioButton
+                            android:id="@+id/man"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="男"
+                            android:checked="true"/>
+                        <RadioButton
+                            android:id="@+id/women"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="女"/>
+
+                </RadioGroup>
+        </TableRow>
+    </TableRow>
+    <TableRow>
+        <TextView android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:text="专业"/>
+       <Spinner android:id="@+id/spacerid"
+           android:layout_width="wrap_content"
+           android:layout_height="wrap_content">
+       </Spinner>
+
+    </TableRow>
+    <TableRow
+        android:layout_margin="20dp">
+        <TextView android:text="兴趣爱好" />
+    </TableRow>
+    <TableRow>
+
+        <CheckBox android:id="@+id/checkbox01"
+            android:text="音乐"/>
+        <CheckBox  android:id="@+id/checkbox02"
+            android:text="运动"/>
+    </TableRow>
+    <TableRow>
+
+        <CheckBox android:id="@+id/checkbox03"
+            android:text="游泳"/>
+
+        <CheckBox  android:id="@+id/checkbox04"
+            android:text="阅读"/>
+    </TableRow>
+    <LinearLayout android:orientation="horizontal"
+        android:gravity="center"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+        <Button android:id="@+id/btnOK"
+            android:gravity="center_horizontal"
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content"
+            android:text="确定" android:onClick="myClick"/>
+        <Button
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content"
+            android:layout_marginLeft="30sp"
+            android:id="@+id/canCel"
+            android:text="取消" android:onClick="myClick"/>
+    </LinearLayout>
+</TableLayout>
